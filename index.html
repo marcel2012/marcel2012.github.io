@@ -217,8 +217,7 @@
 			rysuj_dfs(wierzcholek,0,szerokosc,glebokosc,1);
 			ctx=document.getElementById("canvas").getContext("2d");
 			ctx.clearRect(0,0,c_width,c_height);
-			ctx.fillStyle='blue';
-			ctx.font="bold 15px Courier";
+			ctx.font=(wierzcholek.length<50?22:"bold 12")+"px Consolas";
 			for(i=1;i<wierzcholek.length;i++)
 			{
 				ctx.beginPath();
@@ -229,7 +228,18 @@
 				ctx.stroke();
 			}
 			for(i=0;i<wierzcholek.length;i++)
-				ctx.fillText(i,wierzcholek[i].x*c_width/szerokosc,wierzcholek[i].y*c_height/(glebokosc+1));
+			{
+				ctx.beginPath();
+				ctx.arc(wierzcholek[i].x*c_width/szerokosc,wierzcholek[i].y*c_height/(glebokosc+1),(wierzcholek.length<50?20:10), 0, 2 * Math.PI, false);
+				ctx.fillStyle = '#fff';
+				ctx.fill();
+				ctx.lineWidth = 2;
+				ctx.strokeStyle = '#000';
+				ctx.stroke(); 
+				ctx.fillStyle='#000';
+				ctx.textAlign="center";
+				ctx.fillText(i,wierzcholek[i].x*c_width/szerokosc,wierzcholek[i].y*c_height/(glebokosc+1)+(wierzcholek.length<50?6:3));
+			}
 		}
 	</script>
   </head>
