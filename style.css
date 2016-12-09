@@ -1,0 +1,73 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: linear-gradient(#81AD3E,#81AD3E);
+	color: #fff;
+	font-size: 15px;
+}
+input[type=number], input[type=submit] {
+	background: rgba(255,255,255,0.1);
+	width: 140px;
+	outline: none;
+	border-width: 0;
+	color: #fff;
+	padding: 2px 15px;
+}
+input[type=submit] {
+	margin-left: 70px;
+}
+.opcje {
+	background: rgba(0,0,0,0.9);
+	width: 90%;
+	padding: 2% 5%;
+}
+.opcje td {
+	width: 140px;
+}
+.dana {
+	width: 100%;
+}
+canvas {
+	background: #fff;
+	border: 1px solid #000;
+	margin: auto;
+	position: relative;
+	display: block;
+}
+#dane {
+	background: #fff;
+	border: 1px solid #000;
+	width: 880px;
+	min-height: 80px;
+	overflow-y: auto;
+	padding: 10px;
+	color: #000;
+	margin: auto;
+}
+.dane {
+	background: #fff;
+	border: 1px solid #000;
+	width: 880px;
+	min-height: 150px;
+	overflow-y: auto;
+	padding: 10px;
+	color: #000;
+	margin: auto;
+}
+textarea {
+	display: block;
+	resize: vertical;
+}
+#copy1, #copy2, #copy3 {
+	background: #25281e;
+	border: 1px solid #000;
+	width: 880px;
+	overflow-y: auto;
+	padding: 10px;
+	color: #fff;
+	margin: auto;
+	display: block;
+}
